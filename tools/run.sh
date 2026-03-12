@@ -56,6 +56,8 @@ if [ -e /proc/1/cgroup ] && grep -q docker /proc/1/cgroup; then
 fi
 
 echo
+printf "> "
+printf "%q " "${command[@]}"
 printf '> %q ' "${command[@]}"
 echo -e "\n"
 "${command[@]}"

@@ -1,9 +1,16 @@
 ---
-# the default layout is 'page'
+layout: page
 icon: fas fa-diagram-project
 order: 4
 ---
 
+# Projects（项目列表）
+
+<ul id="gh-projects">
+  <li>正在加载项目列表…</li>
+</ul>
+
+<script src="{{ '/assets/js/github-dashboard.js' | relative_url }}"></script>
 # 项目导航
 
 本页用于把站点内容映射到 GitHub：
