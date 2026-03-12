@@ -170,6 +170,7 @@
       if (status) status.textContent = `已加载 ${repos.length} 个仓库。`;
     } catch (err) {
       if (status) status.textContent = `加载失败：${err.message}，已显示默认主页信息。`;
+      if (status) status.textContent = `加载失败：${err.message}`;
     }
   }
 

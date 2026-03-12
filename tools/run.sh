@@ -58,5 +58,6 @@ fi
 echo
 printf "> "
 printf "%q " "${command[@]}"
+printf '> %q ' "${command[@]}"
 echo -e "\n"
 "${command[@]}"
