@@ -3,8 +3,8 @@
 # Run jekyll serve and then launch the site
 
 prod=false
-command="bundle exec jekyll s -l"
 host="127.0.0.1"
+command=(bundle exec jekyll s -l)
 
 help() {
   echo "Usage:"
@@ -21,6 +21,11 @@ while (($#)); do
   opt="$1"
   case $opt in
   -H | --host)
+    if [[ $# -lt 2 || $2 == -* ]]; then
+      echo "> Missing value for '$1'"
+      help
+      exit 1
+    fi
     host="$2"
     shift 2
     ;;
@@ -40,15 +45,18 @@ while (($#)); do
   esac
 done
 
-command="$command -H $host"
+command+=( -H "$host" )
 
 if $prod; then
-  command="JEKYLL_ENV=production $command"
+  command=(env JEKYLL_ENV=production "${command[@]}")
 fi
 
 if [ -e /proc/1/cgroup ] && grep -q docker /proc/1/cgroup; then
-  command="$command --force_polling"
+  command+=( --force_polling )
 fi
 
-echo -e "\n> $command\n"
-eval "$command"
+echo
+printf "> "
+printf "%q " "${command[@]}"
+echo -e "\n"
+"${command[@]}"
