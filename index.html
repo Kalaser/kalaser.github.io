@@ -1,4 +1,37 @@
 ---
-layout: home
-# Index page
+layout: page
+title: Home
+permalink: /
 ---
+
+<div class="card mb-4">
+  <div class="card-body" id="gh-home">
+    <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+      <img src="https://avatars.githubusercontent.com/u/41234308?v=4" alt="kalaser avatar" width="96" height="96" style="border-radius: 50%; object-fit: cover;" />
+      <div>
+        <h2 class="mb-1">kalaser</h2>
+        <p class="mb-2">GitHub 主页与项目导航</p>
+        <p class="mb-0">
+          <a href="https://github.com/kalaser" target="_blank" rel="noopener">GitHub 主页</a> ·
+          <a href="https://github.com/kalaser?tab=repositories" target="_blank" rel="noopener">仓库列表</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="mb-3">快速导航</h3>
+    <ul class="mb-0">
+      <li><a href="{{ '/projects/' | relative_url }}">Projects</a>：查看全部项目列表与仓库入口</li>
+      <li><a href="{{ '/categories/' | relative_url }}">Categories</a>：按领域词云快速定位项目</li>
+      <li><a href="{{ '/tags/' | relative_url }}">Tags</a>：按技术标签筛选相关仓库</li>
+      <li><a href="{{ '/archives/' | relative_url }}">Archives</a>：按时间浏览项目归档</li>
+    </ul>
+  </div>
+</div>
+
+<p id="gh-load-status" class="text-muted">正在同步最新 GitHub 数据…</p>
+
+<script src="{{ '/assets/js/github-dashboard.js' | relative_url }}"></script>
