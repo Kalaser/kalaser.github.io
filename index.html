@@ -1,8 +1,17 @@
 ---
-layout: home
+layout: page
 # Index page
+permalink: /
 ---
 
+<div id="gh-home" class="card p-3 p-md-4 mb-4">
+  <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+    <img src="https://avatars.githubusercontent.com/u/41234308?v=4" alt="kalaser avatar" width="96" height="96" style="border-radius: 50%; object-fit: cover;" />
+    <div>
+      <h2 class="mb-1">kalaser</h2>
+      <p class="mb-2">GitHub 主页与项目导航</p>
+      <p class="mb-0 text-muted">在这里快速查看主页、仓库和最新项目动态。</p>
+      <p class="mb-0 mt-2">
 <div id="gh-home">
   <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
     <img src="https://avatars.githubusercontent.com/u/41234308?v=4" alt="kalaser avatar" width="92" height="92" style="border-radius: 50%; object-fit: cover;" />
@@ -16,6 +25,39 @@ layout: home
     </div>
   </div>
 </div>
+
+<div class="row g-3 mb-4">
+  <div class="col-12 col-md-6">
+    <div class="card h-100 p-3">
+      <h4 class="mb-2">项目分类</h4>
+      <p class="mb-2 text-muted">按技术领域查看仓库内容。</p>
+      <a href="{{ '/categories/' | relative_url }}">进入 Categories</a>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="card h-100 p-3">
+      <h4 class="mb-2">项目标签</h4>
+      <p class="mb-2 text-muted">按技术栈标签筛选项目。</p>
+      <a href="{{ '/tags/' | relative_url }}">进入 Tags</a>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="card h-100 p-3">
+      <h4 class="mb-2">项目归档</h4>
+      <p class="mb-2 text-muted">按时间顺序浏览历史项目。</p>
+      <a href="{{ '/archives/' | relative_url }}">进入 Archives</a>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="card h-100 p-3">
+      <h4 class="mb-2">项目列表</h4>
+      <p class="mb-2 text-muted">查看全部仓库与说明。</p>
+      <a href="{{ '/projects/' | relative_url }}">进入 Projects</a>
+    </div>
+  </div>
+</div>
+
+<p id="gh-load-status" class="text-muted">正在尝试同步最新 GitHub 数据…</p>
 <p id="gh-load-status" class="text-muted">正在尝试同步最新 GitHub 数据…</p>
   <p>正在加载 GitHub 主页信息…</p>
 </div>
